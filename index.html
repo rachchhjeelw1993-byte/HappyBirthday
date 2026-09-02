@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Celebration For You</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles_restore.css">
+</head>
+<body>
+  <div class="heart-layer"></div>
+  <div class="confetti-layer">
+    <div class="confetti confetti-1"></div>
+    <div class="confetti confetti-2"></div>
+    <div class="confetti confetti-3"></div>
+    <div class="confetti confetti-4"></div>
+    <div class="confetti confetti-5"></div>
+    <div class="confetti confetti-6"></div>
+    <div class="confetti confetti-7"></div>
+    <div class="confetti confetti-8"></div>
+  </div>
+
+  <button type="button" class="music-toggle" id="musicToggle">♫ Music On</button>
+  <audio id="bgMusic" loop style="display:none;"></audio>
+
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="brand"></div>
+    </header>
+
+    <main>
+      <section class="view active" id="hero">
+        <div class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">A Celebration For You</p>
+            <h1>Happy Birthday<br></h1>
+            <p class="lead">Today, we celebrate not just the day you were born, but the incredible person you are. Every single moment with you is a beautiful chapter in our story. Thank you for b[...]
+            <div class="cta-row">
+              <button type="button" class="btn primary" onclick="showView('story')">Open My Heart →</button>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="polaroid-slider">
+              <div class="polaroid-frame">
+                <div class="polaroid-slide active">
+                  <img src="assets/images/single-photo.jpg" alt="Celebration memory">
+                  <figcaption>Cherished Moments ✨</figcaption>
+                </div>
+                <div class="polaroid-slide">
+                  <img src="assets/images/image_6f2d0f85.png" alt="Forever us memory">
+                  <figcaption>Forever Us 🌷</figcaption>
+                </div>
+                <div class="polaroid-slide">
+                  <img src="assets/images/image_fc53c7a5.png" alt="Happy memory">
+                  <figcaption>Endless Laughter 💖</figcaption>
+                </div>
+              </div>
+              <button type="button" class="polaroid-nav prev" aria-label="Previous photo">‹</button>
+              <button type="button" class="polaroid-nav next" aria-label="Next photo">›</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="story">
+        <div class="story-shell">
+          <h2 class="letter-heading">Click for a Quick Reality Check 😜</h2>
+
+          <div class="letter-envelope" id="birthdayEnvelope">
+            <div class="envelope-flap"></div>
+
+            <div class="letter-sheet">
+              <h2 class="letter-title">Happy Birthday Darshu ✨</h2>
+
+              <div class="poem-body">
+                <p>Beeja badha mate duniya ma game tetlo hoy clash,<br>
+                Pan tari sathe vaat thay etle life thai jay jalsa-ne-moj!</p>
+
+                <p>Taro look che ekdam 'premium' ane nature taro sober,<br>
+                Pan mari reels like karva ma tu modo pade che, that's not fair! 😜</p>
+
+                <p>Mari badhi j crazy vaato par tu je rite hase che,<br>
+                Sachu kahu to, tu j maro favorite 'stress buster' bane che.</p>
+
+                <p>Lagna pachi bhale remote control mate aapni thay fight,<br>
+                Pan tari bajuma besine aakhi life lage che ekdam bright! 🌟</p>
+              </div>
+
+              <p class="letter-signoff"><b>~ Happy Birthday Darshu ❤️</b></p>
+              <button type="button" class="btn primary letter-next-btn" id="closeLetterBtn">Continue Surprise →</button>
+            </div>
+
+            <div class="envelope-body-front"></div>
+
+            <button type="button" class="wax-seal" id="envelopeSeal">
+              <span class="seal-heart">♥</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="balloons">
+        <div class="balloon-view">
+          <div class="balloon-panel">
+            <div class="section-heading">
+              <p class="letter-heading">Pop for Happiness</p>
+              <h2>Every Balloon Holds a Reason for You... ❤️</h2>
+            </div>
+            <div class="balloon-scene" id="balloonScene"></div>
+            <button type="button" class="btn primary hidden" id="nextFromBalloons">See Your Invitation →</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="success">
+        <div class="balloon-panel" style="max-width: 680px;">
+          <h1 class="success-banner" style="font-size: clamp(2rem, 5vw, 3.5rem); color: var(--accent); margin: 0; font-weight: 800; letter-spacing: 0.05em;">
+            🎉 SUCCESS! 🎉
+          </h1>
+
+          <div class="wish-card-box">
+            <h2 style="font-size: clamp(2.2rem, 4vw, 3rem); color: var(--primary); margin: 0 0 15px;">
+              Happy Birthday, Darshu! 🎂
+            </h2>
+
+            <p style="color: var(--muted); font-size: 1.15rem; line-height: 1.8; margin-bottom: 30px;">
+              You've successfully unlocked every hidden reason! You are my today, my tomorrow, and my absolute favorite chapter in this life. Thank you for being the calm in my chaotic world. Now[...]
+            </p>
+
+            <button type="button" class="btn primary" id="surpriseButtonFromWish">
+              See Your Invitation Detail →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="rsvp">
+        <div class="glass-card rsvp-card">
+          <div class="rsvp-question" id="questionModal">
+            <p class="eyebrow">A Personal Request</p>
+            <h2>Will You Celebrate With Me?</h2>
+            <p>I want to spend this beautiful milestone day celebrating you. Will you be with me for this special birthday celebration?</p>
+            <div class="rsvp-actions">
+              <button type="button" class="btn primary yes-btn">Yes</button>
+              <button type="button" class="btn secondary no-btn">No</button>
+            </div>
+          </div>
+
+          <div class="final-invite hidden" id="finalInvite">
+            <div class="final-invite-inner">
+              <p class="eyebrow">The Celebration Details</p>
+              <h3>Let's Make It Unforgettable</h3>
+              <div class="final-card-grid">
+                <div class="final-card">
+                  <span class="label">Date</span>
+                  <div class="final-card-value">03 Sept 2026</div>
+                  <p>Birthday Celebration</p>
+                </div>
+                <div class="final-card">
+                  <span class="label">Time</span>
+                  <div class="final-card-value">8:30 PM</div>
+                  <p>Dress in your finest, with hearts ready</p>
+                </div>
+                <div class="final-card" id="venueCard">
+                  <span class="label">Venue</span>
+                  <div class="final-card-value">Teera, Wakad</div>
+                  <p>Kaspate Corner, Hinjawadi Rd, Pune</p>
+                  <a href="https://google.com" target="_blank" class="map-link">Open in Google Maps</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Made with ♥ for your special day</p>
+    </footer>
+  </div>
+
+  <script src="script_restore.js"></script>
+</body>
+</html>
